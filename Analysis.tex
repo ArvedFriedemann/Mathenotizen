@@ -1,0 +1,64 @@
+\documentclass[]{article}
+
+\usepackage{amsmath}
+\usepackage{dsfont}
+\usepackage{lipsum}
+\usepackage[margin=10pt]{geometry}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+\begin{document}
+
+\newcommand{\NN}{\mathds{N}}
+\newcommand{\ZZ}{\mathds{Z}}
+\newcommand{\PP}{\mathds{P}}
+\newcommand{\RR}{\mathds{R}}
+\newcommand{\QQ}{\mathds{Q}}
+
+\section*{Rechenregeln}
+$x^nx^m=x^{n+m}$\\
+$(x^n)^m = x^{nm}$\\
+$x^ny^n = (xy)^n$\\
+$x>y \lor x=y \lor x<y$\\
+$x<y\Rightarrow -x>-y$\\
+$x<y\Rightarrow x+a<y+a$\\
+$x<y,a<b\Rightarrow x+a<y+b$\\
+$x<y,a>0\Rightarrow ax<ay$\\
+$0\leq x<y,0\leq a<b\Rightarrow ax<by$\\
+$x<y,a<0\Rightarrow ax>ay$\\
+$x^2>0; x>0\Rightarrow x^{-1}>0$\\
+$0\leq x < y \Rightarrow x^{-1}>y^{-1}$\\
+$|xy|=|x|\cdot|y|$\\
+$|x+y|\leq|x|+|y|$\\
+$|-x|=|x|$\\
+$|\frac{x}{y}| = \frac{|x|}{|y|}$\\
+$\exists \lim a_n, \lim b_n\Rightarrow \lim (a_n+b_n) = (\lim a_n) + (\lim b_n)$\\
+$\exists \lim a_n, \lim b_n\Rightarrow \lim (a_n\cdot b_n) = (\lim a_n) \cdot (\lim b_n)$\\
+$\exists \lim a_n, \lim b_n\Rightarrow \lim (\frac{a_n}{b_n}) = \frac{\lim a_n}{\lim b_n}$\\
+$a_n\leq b_n\Rightarrow \lim a_n\leq \lim b_n$\\
+$\exists \sum^\infty_{n=0}a_n, \sum^\infty_{n=0}b_n\Rightarrow  \sum^\infty_{n=0}(\lambda a_n+\mu b_n) = \lambda \sum^\infty_{n=0}a_n + \mu\sum^\infty_{n=0}b_n$
+
+\section*{Formeln}
+$\binom{n}{k} = \frac{n!}{k!(n-k)!}$\\
+$(x+y)^n = \sum_{k=0}^n\binom{k}{n} x^{n-k}y^{k}$\\
+$\sum^n_{k=0}x^k = \frac{1-x^k}{1-x}$\\
+$(1+x)^n\leq 1+nx$\\
+$\lim \frac{1}{n} = 0$\\
+$\lim \frac{n}{n+1} = 1$\\
+$\lim \frac{n}{2^n} = 0$\\
+Folge zu Reihe: $c_n=c_0+\sum^n_{k=1}(c_k-c_{k-1})$\\
+$\sum_{n=0}^\infty x^n = \frac{1}{1-x}$\\
+$\lim a_n = \pm\infty, a_n\neq 0 \Rightarrow \lim\frac{1}{a_n} = 0 $\\
+$\lim a_n = 0, a_n>0 \Rightarrow \lim \frac{1}{a_n}=\infty$ ($-\infty$ analog $a_n<0$)\\
+
+\section*{Axiome}
+Arch.: $x,y>0, \exists n\in\NN. nx>y$
+
+\section*{Definitionen}
+$\lim_{n\rightarrow\infty}a_n = a :\Leftrightarrow\forall \epsilon.\exists N . n\geq N \Rightarrow |a-a_n|<\epsilon$
+Beschränkt: $M\geq 0, |a_n|\leq M$\\
+(spezieller: oben unten)\\
+$|x|<1\Rightarrow\sum^\infty_{n=0}a_n = \lim_{m\rightarrow\infty}\sum^m_{n=0}a_n$
+Cauchy:
+
+\end{document}
