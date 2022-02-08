@@ -1,6 +1,7 @@
 \documentclass[]{article}
 
 \usepackage{amsmath}
+\usepackage{amssymb}
 \usepackage{dsfont}
 \usepackage{lipsum}
 \usepackage[margin=10pt]{geometry}
@@ -14,7 +15,8 @@
 \newcommand{\PP}{\mathds{P}}
 \newcommand{\Z}[1]{\ZZ/#1\ZZ}
 
-\section*{Kapitel 1}
+\section*{Teilbarkeit}
+
 $a|b\Leftrightarrow b = q\cdot a$\\
 $a|a; a|0; a|b\Rightarrow a|bc$\\
 $a|b,a|b'\Rightarrow a|(b+b'),a|(b-b')$\\
@@ -91,7 +93,73 @@ $(\Z{n})^*\rightarrow(\Z{n_1})^*\rightarrow\cdots
 $[x]\mapsto ([x],...,[x])$ bijektiv und Gruppenhomo\\
 (selbes ohne Stern und Ringhomo)\\
 
-\section{Gruppen}
+\section*{Gruppen}
+
+$a*(b*c)=(a*b)*c; a*e=a; a*a^{-1}=e$\\
+$e*a=a; a^{-1}*a=e; (a^{-1})^{-1}=a$\\
+$(a*b)^{-1}=a^{-1}*b^{-1}$\\
+$a*x=a*x'\Rightarrow x=x'$\\
+$x*a=x'*a\Rightarrow x=x'$\\
+Abelsch: $a*b=b*a$\\
+Ordnung: $|G|$ oder $\#G$\\
+Untergruppe $H$ von $G$:\\
+$H\neq\emptyset; a,b\in H\Rightarrow ab\in H, a^{-1}\in H$\\
+auch: $a,b\in H \Rightarrow ab^{-1}\in H$\\
+Zyklisch: $G=\{g^n\ |\ n\in\ZZ\}=\langle g\rangle$\\
+Zyklisch ist abelsch.\\
+Ordnung von $g$: $\min r. g^r=e$, sonst $\infty$\\
+$\langle g \rangle$ Untergruppe der Ordnung von $g$\\
+Ord $G$ ist $n$, $g\in G$ Ord $n$ $\Rightarrow\langle g \rangle = G$\\
+Gruppenhomomorphismus:\\
+$(G,*),(H,\cdot)$ Gruppen, $f:G\rightarrow H$\\
+$f(a*b)=f(a)\cdot f(b)$\\
+isomorphismus: $f\circ g = id_H, g\circ f = id_G$\\
+monomorph: $f$ injektiv\\
+epimorph: $f$ surjektiv\\
+$f$ Gruppenhom $\Rightarrow f(e_G)=e_H, f(a^{-1})=f(a)^{-1}$\\
+Zyklische Gruppen gleicher Ordnung isomorph\\
+Jede Zyklische Gruppe isomorph zu $\ZZ$ oder $\Z{n}$\\
+Monomorph $f$, $f(g)=h \Rightarrow $Ord $g$ = Ord $h$\\
+$G,H$ Gruppen. $G\times H$ Gruppe mit \\
+$.\qquad(g_1,h_1)*(g_2,h_2)=(g_1g_2,h_1h_2)$\\
+Wenn $(nm)=1$,:\\
+$\Z{nm}\cong\Z{n}\times\Z{m}$\\
+$(\Z{nm})^*\cong(\Z{n})^*\times(\Z{m})^*$\\
+Endlich Erzeugt: Gruppe $G$, $A\subset G, |A|\in\NN$\\
+$.\qquad$ $g\in G$ endliches Produkt aus $A$.\\
+Kongruenz: $H$ untergr. $G$, $a,b\in G$,\\
+$.\qquad a\equiv b\mod H :\Leftrightarrow ab^-1\in H$\\
+$\rightarrow$ Äquivrel auf $G$ mit Klassen $Ha=\{ha\ |\ h\in H\}$\\
+Rechtsnebenklassen isomorph.\\
+Deshalb $|Ha|=|Hb|$\\
+$a\equiv' b\mod H$ mit $b^{-1}a\in H$ analog\\
+mit Äquivklassen $aH$\\
+Lagrange: $H$ UG $G$ $\Rightarrow$ (Ord $H$)$|$(Ord $G$)\\
+Index : $[G : A] = |\{Ha | a\in G\}|$\\
+$[G : H] = |G|/|H|$\\
+$G$ endl. Grp., $a\in G \Rightarrow$ (Ord $a$)$|$(Ord $G$)\\
+Ord $G$ prim $\Rightarrow$ $G$ zyklisch\\
+$G$ endl. Grp., $a\in G\Rightarrow a^{|G|}=e$\\
+$n\geq 1, (a,n)=1 \Rightarrow a^{\varphi(n)}\equiv 1 \mod n$\\
+$p\in\PP , p\nmid a\Rightarrow a^{p-1}\equiv 1\mod p$\\
+$forall a, p\in\PP. a^p\equiv a\mod p$\\
+Normalteiler:\\
+$H$ UG $G$, $g\in G, h\in H\Rightarrow g^{-1}hg\in H$\\
+$H\vartriangleleft G$ oder $aH = Ha$\\
+$G$ abelsch, $H$ UG $G$ $\Rightarrow H\vartriangleleft G$ \\
+$N\vartriangleleft G\Rightarrow $ Gruppe $G/H$ mit $Na * Nb = N(ab)$\\
+$|G/N| = [G : N] = |G|/|N|$\\
+Gruppenhom $f:G\rightarrow H$:\\
+$Ker\ f:= \{g\in G\ |\ f(g)=e_H\}$\\
+$Im\ f:= \{f(g)\ |\ g\in G\}$\\
+$Ker\ f\vartriangleleft G$\\
+$f$ injekt. $\Leftrightarrow Ker\ f=\{e_H\}$\\
+$Im\ f$ UG $G$\\
+$N\vartriangleleft G\Rightarrow N=Ker\ \pi$\\
+mit $\pi : G\rightarrow G/N$ kanonisch\\
+Homomorphiesatz:\\
+$f:G\rightarrow H$ Gruppenhom.\\
+$G/Ker\ f\cong Im\ f$\\
 
 
 
