@@ -15,6 +15,9 @@
 \newcommand{\RR}{\mathds{R}}
 \newcommand{\QQ}{\mathds{Q}}
 
+\newcommand{\infsum}{\sum^\infty_{n=0}}
+\newcommand{\infsumv}[1]{\sum^\infty_{#1=0}}
+
 \section*{Rechenregeln}
 $x^nx^m=x^{n+m}$\\
 $(x^n)^m = x^{nm}$\\
@@ -36,7 +39,9 @@ $\exists \lim a_n, \lim b_n\Rightarrow \lim (a_n+b_n) = (\lim a_n) + (\lim b_n)$
 $\exists \lim a_n, \lim b_n\Rightarrow \lim (a_n\cdot b_n) = (\lim a_n) \cdot (\lim b_n)$\\
 $\exists \lim a_n, \lim b_n\Rightarrow \lim (\frac{a_n}{b_n}) = \frac{\lim a_n}{\lim b_n}$\\
 $a_n\leq b_n\Rightarrow \lim a_n\leq \lim b_n$\\
-$\exists \sum^\infty_{n=0}a_n, \sum^\infty_{n=0}b_n\Rightarrow  \sum^\infty_{n=0}(\lambda a_n+\mu b_n) = \lambda \sum^\infty_{n=0}a_n + \mu\sum^\infty_{n=0}b_n$
+$\exists \sum^\infty_{n=0}a_n, \sum^\infty_{n=0}b_n\Rightarrow  \sum^\infty_{n=0}(\lambda a_n+\mu b_n) = \lambda \sum^\infty_{n=0}a_n + \mu\sum^\infty_{n=0}b_n$\\
+Bernoulli $x\geq -1, n\in\NN$: $(1+x)^n\geq 1+nx$\\
+$exp(x+y) = exp(x)exp(y)$\\
 
 \section*{Formeln}
 $\binom{n}{k} = \frac{n!}{k!(n-k)!}$\\
@@ -50,15 +55,63 @@ Folge zu Reihe: $c_n=c_0+\sum^n_{k=1}(c_k-c_{k-1})$\\
 $\sum_{n=0}^\infty x^n = \frac{1}{1-x}$\\
 $\lim a_n = \pm\infty, a_n\neq 0 \Rightarrow \lim\frac{1}{a_n} = 0 $\\
 $\lim a_n = 0, a_n>0 \Rightarrow \lim \frac{1}{a_n}=\infty$ ($-\infty$ analog $a_n<0$)\\
+$\sqrt{n+p\sqrt{n+p...}}=\frac{1}{2}\left(p1+\sqrt{1+4n})\right), p\in\{1,-1\}$\\
+$\sum^\infty_{n=1}\frac{1}{n^k},$  $k=1$ dann $\infty$ sonst konv.\\
+TODO: Quotientenkrit.\\
+$exp(x) = \sum^\infty_{n=0}\frac{x^n}{n!}$ abs. konv.\\
+
+\section{Folgerungen}
+Intervallschachtelung:\\
+$I_0\subset I_1\subset...$, $\lim diam(I_n) = 0$ konv. $x\in\RR$\\
+Bolzano-Weierstraß: Jede beschränkte Folge $(a_n)_{n\in\NN}$\\
+ besitzt eine konvergente Teilfolge.\\
+Cauchy-Konvergenz $\sum^\infty_{n=0}a_n$ konv. gdw.:\\
+$\forall \epsilon > 0. \exists N.forall n,m\geq N.\left|\sum^n_{k=m}\right|<\epsilon$\\
+notwendig. krit: $\lim a_n = 0$\\
+konvergiert gdw. Folge Partialsummen beschränkt. \\
+$a_n$ mon. fallend, nicht negativ $\lim a_n = 0$ dann\\
+$\sum^\infty (-1)a^n$ konvergiert. \\
+Majoranten-Krit: $\sum^\infty_{n=0}c_n$ konv.\\
+$0\leq c_n\geq |a_n|\Rightarrow \sum^\infty_{n=0}|a_n|$ konv.\\
+$c_n := \sum^n_{k=0}a^nb^{n-k};$
+$\infsum c_n = (\infsum a_n)\cdot(\infsum b_n)$\\
+.$\qquad$ wenn subsum. absol. konv.\\
+$exp(x)>0; exp(-x)=\frac{1}{-x}; exp(x)=e^x$\\
+
 
 \section*{Axiome}
 Arch.: $x,y>0, \exists n\in\NN. nx>y$
 
 \section*{Definitionen}
-$\lim_{n\rightarrow\infty}a_n = a :\Leftrightarrow\forall \epsilon.\exists N . n\geq N \Rightarrow |a-a_n|<\epsilon$
+$\lim_{n\rightarrow\infty}a_n = a :\Leftrightarrow\forall \epsilon>0.\exists N . n\geq N \Rightarrow |a-a_n|<\epsilon$\\
 Beschränkt: $M\geq 0, |a_n|\leq M$\\
 (spezieller: oben unten)\\
-$|x|<1\Rightarrow\sum^\infty_{n=0}a_n = \lim_{m\rightarrow\infty}\sum^m_{n=0}a_n$
-Cauchy:
+$|x|<1\Rightarrow\sum^\infty_{n=0}a_n = \lim_{m\rightarrow\infty}\sum^m_{n=0}a_n$\\
+Cauchy:$\forall \epsilon. \exists N.\forall n,m\leq N |a_n-a_m|<\epsilon$\\
+b-adisch, $b\geq 2$: $\pm\sum^\infty_{n=-k}a_nb^{-k}$\\
+Häufungspunkt: TF $a_n$ konv. geg. $a$\\
+Monotonie (bsp. streng): $a_n\leq a_{n+1}$\\
+Beschränkt monoton konvergiert\\
+k-te Wurzel $x^k=a$:\\
+$x_{n+1} = \frac{1}{k}\left((k-1)x_n+\frac{a}{x_n^{k-1}}\right)$\\
+Absolute Konvergenz $\sum^\infty a_n$:\\
+$\sum^\infty|a_n|$ konvergiert\\
+gdw. $\sum^\infty|a_n|<\infty$.
+Konv. auch im eigentlichen Sinn.\\
+Berührpunkt (BP) $a$ von $A$: $U_\epsilon(a):=]a-\epsilon,a+epsilon[,\epsilon>0$\\
+.$\qquad$ mit mind. einem Punkt in $A$\\
+Häufungspunkt (HP): $\epsilon$-Umgeb. unendl. $A$.\\
+$a\in A$ BP\\
+$a_n\in A, \exists \lim a_n = a\Leftrightarrow a$ BP von $A$\\
+$a$ HP $A$ $\Leftrightarrow$ $a$ BP $A/\{a\}$\\
+Supremum: kleinste ob. Schranke $K$ von $A$\\
+Infimum analog\\
+Maximum $A$: $sup(A)\in A$ (Minimum analog)\\
+Limes superior / inferior:\\
+$\lim\sup a_n = \lim (\sup\{a_k : k\geq n\})$ (inf analog)\\
+$\lim\sup a_n = a \Leftrightarrow$ (inferior analog)\\
+.$\qquad a_n < a+\epsilon$ bis auf endl. viele\\
+.$\qquad a_m > a-\epsilon$ unendlich viele $m\in\NN$\\
+
 
 \end{document}
