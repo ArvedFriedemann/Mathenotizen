@@ -160,8 +160,37 @@ mit $\pi : G\rightarrow G/N$ kanonisch\\
 Homomorphiesatz:\\
 $f:G\rightarrow H$ Gruppenhom.\\
 $G/Ker\ f\cong Im\ f$\\
+Gruppenop:
+Gruppe $G$, Menge $M$\\
+$G\times M\rightarrow M$, $(g,x)\mapsto gx$\\
+$(gh)x = g(hx)$\\
+$ex = x$\\
+Notation: $G\curvearrowright M$\\
+$T_g : M\rightarrow M, x\mapsto gx$ bijektiv\\
+$T_e=id; T_{gh}=T_gT_h; T_{g^{-1}}=(T_g)^{-1}$\\
+$g\mapsto T_g$ Gruppenhom $G\rightarrow Bij(M,M)$\\
+Bahn/Orbit : $Gx=\{gx\in M\ |\ g\in G\}$\\
+Fixpunkt $x$: $ Gx = \{x\}$\\
+Stabilisator / Isotropiegruppe / Fixgruppe : \\
+$G_x = {g\in G \ |\ gx = x}$ UG $G$\\
+$G$ oper. transitiv $M$ : $\exists x. Gx = M$\\
+$G$ oper. frei $M$ : $\forall x. G_x=\{e\}$\\
+Bahn Äquivklasse bez. $x~y : \exists g\in G. gx = y$\\
+$gx=hx\Leftrightarrow$ $g$ und $h$ selbe Linksnebenklasse $G_x$\\
+$|Gx| = [G : G_x]$\\
+$gx=y\Rightarrow G_y=gG_xg^{-1}$\\
+$G_x\vartriangleleft G \Leftrightarrow (y\in Gx\Rightarrow G_x=G_y)$\\
+Klassenformel:\\
+$|M|=\sum_{x\in R}[G : G_x]$\\
+Konjugationsklassen: Bahnen von\\
+$G\curvearrowright G$ mit $(g,h)\mapsto ghg^{-1}$\\
+Zentralisator: $C_G(h):=\{g\in G\ |\ gh = hg\}$\\
+Zentrum: $Z(G) := \{g\in G\ |\ \forall h\in G. gh=hg \} = \bigcap_{h\in G}C_G(h)$\\
 
-
-
+p-Gruppe: $|G|=p^n, p\in\PP$\\
+p-Untergruppe: $H$ UG $G$, $H$ p-Gruppe\\
+Fundamentallemma:\\
+$G\curvearrowright M, M_0=\{x\in M\ |\ $Fixpunkt $x$ $\}=\{x\in M\ |\ Gx=\{x\} \}$\\
+Cauchy: $G$ endl. Grp., $p\in\PP, p| |G|\Rightarrow$ $G$ hat elem. Ord. $p$.
 
 \end{document}
